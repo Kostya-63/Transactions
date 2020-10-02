@@ -49,4 +49,12 @@ public class Car {
     public void setModel(String model) {
         this.model = model;
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
