@@ -22,8 +22,8 @@ public class MainApp {
       User user4 = new User("User4", "Lastname4", "user4@mail.ru");
       Car car1 = new Car(1, "BMW");
       Car car2 = new Car(2, "TAZ");
-      Car car3 = new Car(1, "BMW");
-      Car car4 = new Car(2, "TAZ");
+      Car car3 = new Car(3, "Volvo");
+      Car car4 = new Car(4, "Tesla");
 
       car1.setUser(user1);
       car2.setUser(user2);
@@ -48,6 +48,13 @@ public class MainApp {
          System.out.println("Car = "+user.getCar().getModel());
          System.out.println();
       }
+
+      User user = userService.findUserByCar(2, "TAZ");
+      System.out.println("Id = "+user.getId());
+      System.out.println("First Name = "+user.getFirstName());
+      System.out.println("Last Name = "+user.getLastName());
+      System.out.println("Email = "+user.getEmail());
+      System.out.println("Car = "+user.getCar().getModel());
       context.close();
    }
 }
