@@ -24,11 +24,11 @@ public class MainApp {
       Car car2 = new Car(2, "TAZ");
       Car car3 = new Car(1, "BMW");
       Car car4 = new Car(2, "TAZ");
+
       car1.setUser(user1);
       car2.setUser(user2);
       car3.setUser(user3);
       car4.setUser(user4);
-
       user1.setCar(car1);
       user2.setCar(car2);
       user3.setCar(car3);

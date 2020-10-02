@@ -919,81 +919,74 @@ SELECT|sys.sys_config:null
       <ObjectGrants>SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,RELOAD,SHUTDOWN,PROCESS,FILE,REFERENCES,INDEX,ALTER,SHOW DATABASES,SUPER,CREATE TEMPORARY TABLES,LOCK TABLES,EXECUTE,REPLICATION SLAVE,REPLICATION CLIENT,CREATE VIEW,SHOW VIEW,CREATE ROUTINE,ALTER ROUTINE,CREATE USER,EVENT,TRIGGER,CREATE TABLESPACE,CREATE ROLE,DROP ROLE!
 </ObjectGrants>
     </user>
-    <user id="287" parent="1" name="springuser">
-      <Host>%</Host>
-      <ObjectGrants>ALL PRIVILEGES|db_example:null
-</ObjectGrants>
-    </user>
-    <table id="288" parent="2" name="cars"/>
-    <table id="289" parent="2" name="myidolstable"/>
-    <table id="290" parent="2" name="users"/>
-    <column id="291" parent="288" name="userid">
+    <table id="287" parent="2" name="cars"/>
+    <table id="288" parent="2" name="myidolstable"/>
+    <table id="289" parent="2" name="users"/>
+    <column id="290" parent="287" name="model">
       <Position>1</Position>
-      <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="292" parent="288" name="series">
+    <column id="291" parent="287" name="series">
       <Position>2</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="293" parent="288" name="model">
+    <column id="292" parent="287" name="user_id">
       <Position>3</Position>
-      <DataType>varchar(30)|0s</DataType>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <key id="294" parent="288" name="PRIMARY">
+    <key id="293" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>userid</ColNames>
+      <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="295" parent="288" name="cars_users_id_fk">
-      <ColNames>userid</ColNames>
+    <foreign-key id="294" parent="287" name="FKqw4c8e6nqrvy3ti1xj8w8wyc9">
+      <ColNames>user_id</ColNames>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
-      <OnUpdate>cascade</OnUpdate>
-      <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="296" parent="289" name="id">
+    <column id="295" parent="288" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="297" parent="289" name="name">
+    <column id="296" parent="288" name="name">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
     </column>
-    <column id="298" parent="289" name="lastName">
+    <column id="297" parent="288" name="lastName">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
     </column>
-    <column id="299" parent="289" name="age">
+    <column id="298" parent="288" name="age">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <key id="300" parent="289" name="PRIMARY">
+    <key id="299" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="301" parent="290" name="id">
+    <column id="300" parent="289" name="id">
       <Position>1</Position>
-      <DataType>int|0s</DataType>
+      <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="302" parent="290" name="name">
+    <column id="301" parent="289" name="email">
       <Position>2</Position>
-      <DataType>varchar(30)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="303" parent="290" name="last_name">
+    <column id="302" parent="289" name="name">
       <Position>3</Position>
-      <DataType>varchar(30)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="304" parent="290" name="email">
+    <column id="303" parent="289" name="last_name">
       <Position>4</Position>
-      <DataType>varchar(30)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
     </column>
-    <key id="305" parent="290" name="PRIMARY">
+    <key id="304" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
