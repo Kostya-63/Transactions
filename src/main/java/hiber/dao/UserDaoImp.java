@@ -33,4 +33,11 @@ public class UserDaoImp implements UserDao {
               .setParameter("s", series)
               .setParameter("m", model).uniqueResult();
    }
+
+   @Override
+   public User findUser(Long id) {
+      return (User) sessionFactory.getCurrentSession().createQuery("from User u join fetch u.car where u.id = :id")
+              .setParameter("id", id)
+              .getSingleResult();
+   }
 }
